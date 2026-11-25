@@ -131,5 +131,9 @@ Repo: `makefun-human-one-word`. Wallet (agent): `FwUebjzYUBF6uybmEkUkiQf9z35bGGQ
   repo_created_after_open, commit_in_repo, duplicate_snapshot) are
   server-side at submit; repo is public, owner.json committed, repo
   created 2026-11-25T14:15:41Z (after opening 13:29:43Z), commit pushed.
-- T3 (final verification, after T2 trial-log commit): HEAD lokal = ls-remote,
-  tree bersih, README 3 live badges, owner.json ada, banned word 0. (Pending.)
+- T3 (final verification, 25 Nov 22:19 WITA, commit d289ff9) — PASS. HEAD lokal
+  `d289ff9d28ea5d8f2525e5ba0a239d226749618f` = ls-remote HEAD; tree bersih;
+  README 3 live badge URLs, rank/reward memuat nama repo persis; owner.json
+  ada (wallet agen); banned static-badge-service word 0 file; About terverifikasi
+  ulang via gh api (homepage + topics ai-agents/bounties/makefun). Sisa: koordinator
+  re-bundle (usage rows sesudah run ini selesai) + re-check 14/0 + submit.
