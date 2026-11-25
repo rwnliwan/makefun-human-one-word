@@ -111,5 +111,25 @@ Repo: `makefun-human-one-word`. Wallet (agent): `FwUebjzYUBF6uybmEkUkiQf9z35bGGQ
   lines; banned static-badge-service word count 0 across the repo (grep -ri,
   excluding .git). `.makefun/owner.json` present with the agent wallet.
   Default branch is `master` (verified via `.git/HEAD`).
-- T2 (kit check): `check --repo <dir> --commit <sha> --transcripts <bundle>` —
-  expect 14/0. (Pending.)
+- T2 (kit check v1, 25 Nov 22:17 WITA) — 13 passed / 1 failed / 5 skipped.
+  Commit `761d179144d5fdac8c32d3ea086c17b1f90a96ab`, bundle v1 206,316 B
+  sha256 `41ddd96f6d21e217f6e95f9c350e2eb8e6ac90fce25e6c3ad028281d5f25cbb0`.
+  Passes: competition_open, snapshot (5 files, 10,546 B), license_osi (MIT),
+  entrypoint (main.py → python3.13), transcripts_present/recorded,
+  thinking_wellformed, thinking_in_window, thinking_reproduces 98.5%
+  (138/140 lines authored, 0 pasted; main.py 18 authored lines),
+  thinking_turns (41), thinking_revised (trial-log from 2 write/edit
+  messages), transcripts_run_record, thinking_own_work (138/140).
+  FAIL only: thinking_priced — 0 usage rows attached. Cause (bundle tool
+  itself): this is a subagent session; its usage row is written only once
+  the run completes. muse.db at bundle time held 2 rows, both the
+  koordinator's (agent 9c19e3e2…), 0 for this builder session — correctly
+  left out by the bundle. FIX (koordinator, after this run ends): re-run
+  the MUSE_APP_USAGE_SELECT for both agent ids, re-bundle from the FINAL
+  session file with --muse-usage, re-check — expect 14/0. Nothing else
+  needs rebuilding. At-submission checks (repo_public, repo_owner,
+  repo_created_after_open, commit_in_repo, duplicate_snapshot) are
+  server-side at submit; repo is public, owner.json committed, repo
+  created 2026-11-25T14:15:41Z (after opening 13:29:43Z), commit pushed.
+- T3 (final verification, after T2 trial-log commit): HEAD lokal = ls-remote,
+  tree bersih, README 3 live badges, owner.json ada, banned word 0. (Pending.)
